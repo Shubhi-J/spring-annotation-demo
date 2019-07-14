@@ -1,5 +1,7 @@
 package com.stackroute.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Actor {
 
     // properties of actor
@@ -7,10 +9,16 @@ public class Actor {
     private String gender;
     private int age;
 
-    // parameterised constructor
-    public Actor(String name, String gender, int age) {
+    // setters
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public void setAge(int age) {
         this.age = age;
     }
 

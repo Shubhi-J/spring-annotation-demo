@@ -1,5 +1,6 @@
 package com.stackroute.demo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -10,25 +11,45 @@ public class Config {
     // bean for movie having dependencies on 3 actors
     @Bean
     @Scope("prototype")
-    public Movie movie(){
-        return new Movie(actor1(),actor2(),actor3());
+    public Movie movie() {
+    Movie movie=new Movie();
+        movie.setActor1(actor1());
+        movie.setActor2(actor2());
+        movie.setActor3(actor3());
+
+        return movie;
     }
 
     // bean for actor having dependencies on name, gender, age
     @Bean
     public Actor actor1(){
-        return new Actor("Ranbir","male",32);
+
+        Actor actor1=new Actor();
+        actor1.setName("Ranbir");
+        actor1.setGender("male");
+        actor1.setAge(31);
+        return actor1;
     }
 
     // bean for actor having dependencies on name, gender, age
     @Bean
     public Actor actor2(){
-        return new Actor("Katrina","female",29);
+
+        Actor actor2=new Actor();
+        actor2.setName("Dipika");
+        actor2.setGender("female");
+        actor2.setAge(33);
+        return actor2;
     }
 
     // bean for actor having dependencies on name, gender, age
     @Bean
     public Actor actor3(){
-        return new Actor("Dipika","female",30);
+
+       Actor actor3=new Actor();
+        actor3.setName("Katrina");
+        actor3.setGender("female");
+        actor3.setAge(30);
+        return actor3;
     }
 }
