@@ -7,7 +7,7 @@ public class Demo {
 
     public static void main(String[] args) {
 
-        // create object of movie class
+        // Create object of movie class
         Movie movie;
 
         ApplicationContext context=new AnnotationConfigApplicationContext(com.stackroute.demo.Config.class);

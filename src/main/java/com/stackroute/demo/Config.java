@@ -12,12 +12,7 @@ public class Config {
     @Bean
     @Scope("prototype")
     public Movie movie() {
-    Movie movie=new Movie();
-        movie.setActor1(actor1());
-        movie.setActor2(actor2());
-        movie.setActor3(actor3());
-
-        return movie;
+        return new Movie();
     }
 
     // bean for actor having dependencies on name, gender, age
