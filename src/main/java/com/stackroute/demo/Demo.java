@@ -16,6 +16,6 @@ public class Demo {
         movie = context.getBean( Movie.class);
 
         // call method to display actor details
-        movie.displayActor();
+       // movie.displayActor();
    }
 }
