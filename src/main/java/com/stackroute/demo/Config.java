@@ -13,4 +13,10 @@ public class Config {
     public BeanLifecycleDemoBean beanLifecycleDemoBean(){
         return new BeanLifecycleDemoBean();
     }
+
+    // bean for lifeCycle demo
+    @Bean
+    public BeanPostProcessorDemoBean beanPostProcessorDemoBean(){
+        return new BeanPostProcessorDemoBean();
+    }
 }
